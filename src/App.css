@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #3498db;
+    --primary-hover: #2176ae;
+
+    --bg-color: #f5f7fb;
+    --card-bg: #ffffff;
+
+    --text-color: #1a1a1a;
+    --muted-text: #555;
+
+    --border-color: #e0e0e0;
+
+    --success-color: #27ae60;
+    --warning-color: #e67e22;
+    --danger-color: #e74c3c;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #4dabf7;
+        --primary-hover: #74c0fc;
+
+        --bg-color: #121212;
+        --card-bg: #1e1e1e;
+
+        --text-color: #f1f1f1;
+        --muted-text: #b5b5b5;
+
+        --border-color: #333;
+
+        --success-color: #2ecc71;
+        --warning-color: #f39c12;
+        --danger-color: #e74c3c;
+    }
+}
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    font-family: system-ui, sans-serif;
+}
+
+.card-custom {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12) !important;
+}
+
+.card-custom h2,
+.card-custom h5,
+.card-custom p,
+.card-custom li {
+    color: var(--text-color) !important;
+}
+
+.primary-btn {
+    background: var(--primary-color) !important;
+    border: none !important;
+    color: white !important;
+    transition: background 0.2s ease;
+}
+
+.primary-btn:hover {
+    background: var(--primary-hover) !important;
+    color: white !important;
+}
+
+.form-control {
+    background: var(--card-bg) !important;
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+}
+
+.form-control::placeholder {
+    color: var(--muted-text) !important;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary-color) 25%, transparent) !important;
+}
+
+.progress {
+    background-color: var(--border-color) !important;
+    border-radius: 8px !important;
+    height: 12px !important;
+}
+
+.validator-item {
+    font-size: 0.88rem;
+    color: var(--muted-text);
+}
+
+.validator-item.valid {
+    color: var(--success-color) !important;
+}
+
+.validator-item.invalid {
+    color: var(--danger-color) !important;
+}
+
+.app-title {
+    color: var(--text-color) !important;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: -0.3px;
+}
+
+.section-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--muted-text);
+    margin-bottom: 6px;
+}
